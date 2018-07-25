@@ -1,36 +1,14 @@
-    @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
-
-@font-face {
-    font-family: 'Hero';
-    src: url("Hero\ Light.otf") format("opentype");
-    font-weight: normal;
-}
-@font-face {
-    font-family: 'Hero';
-    src: url("./Hero.otf") format("opentype");
-    font-weight: bold;
-}
+@import url('https://fonts.googleapis.com/css?family=Lato');
 
 :root {
-    /* --primary-color: #4C2DA2;
-    --background-color: #6000A8; */
-    --primary-color: #4C2DA2;
     --background-color: black;
 
     --oppisite-background: white;
-    font-family: 'Hero', sans-serif;
-
-    /* statusBarColor: '#1f292e',
-    screenBackgroundColor: '#21272B',
-    tabBarBackgroundColor: '#263238',
-    tabBarButtonColor: '#ffffff',
-    tabBarSelectedButtonColor: "#80CBC4",
-    tabBarSelectedButtonColor: '#26c9b3', */
+    font-family: 'Lato', sans-serif;
 
     background-color: var(--background-color);
     color: rgba(255, 255, 255, 0.87)
 }
-
 html, body {
     margin: 0;
     padding: 0;
@@ -39,7 +17,6 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-     /*background-color: black; */
     animation-name: background;
     animation-duration: 1s;
     animation-delay: 2500ms;
@@ -64,13 +41,11 @@ nav a {
     align-items: center;
     height: 100vh;
     letter-spacing: 4px;
-    font-family: 'Hero', sans-serif;
     background-color: var(--oppisite-background);
     animation-name: background;
     animation-duration: 1s;
     animation-delay: 2500ms;
     animation-fill-mode: forwards;
-    font-weight: bold;
     font-size: 40px;
 }
 #title-container {
@@ -182,29 +157,8 @@ nav a {
     max-width: 1280px;
     margin: 128px auto;
     padding: 0 32px;
-    font-weight: bold;
     color: rgba(255, 255, 255, 0.87);
 }
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-
-} 
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-
-} 
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-
-} 
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-
-} 
-
 .project-tile {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -221,13 +175,9 @@ nav a {
 }
 
 .project-tile span {
-    /* padding: 64px; */
     display: flex;
-    /* align-items: center; */
-    font-weight: bold;
-    font-size: 24px;
+    font-size: 20px;
     padding-top: 64px;
-    /* padding-left: 32px; */
     justify-content: center;
 }
 
@@ -243,7 +193,7 @@ nav a {
 }
 #contact a {
     padding: 16px;
-    margin: 16px 16px 16px 16px;
+    margin: 16px;
 }
 #contact a svg {
     fill: rgba(255, 255, 255, 0.87);
@@ -254,32 +204,6 @@ nav a {
     fill: white;
 }
 
-/* #survey-form {
-    background-color: hsl(204, 11%, 10%)
-}
-#surface {
-    background-color: hsl(0, 0%, 35%)
-} */
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-
-} 
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-
-} 
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    /* padding-left: 32px; */
-} 
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-
-} 
-
 @media (max-width: 768px) {
     #welcome-section {
         font-size: 32px;
@@ -289,13 +213,11 @@ nav a {
         grid-template-columns: 1fr;
         grid-template-rows: auto 1fr;
         grid-template-areas: "title" "image";
-        /* grid-gap: 16px; */
         margin: 32px 0;
     }
     .project-tile span {
         grid-area: title;
         padding: 0 0 16px 0;
-        /* text-align: center; */
         justify-content: center;
     }
     .project-tile .img-container {
@@ -307,12 +229,25 @@ nav a {
     .project-tile span {
         font-size: 20px;
     }
-    @media (max-width: 600px) {
-        #projects {
-            padding: 0 16px;
-        }
-        #welcome-section {
-            font-size: 28px;
-        }
+}
+@media (max-width: 600px) {
+    #projects {
+        padding: 0 16px;
+    }
+    #welcome-section {
+        font-size: 28px;
+    }
+}
+@media (max-width: 350px) {
+    #welcome-section {
+        font-size: 24px;
+    }
+    #contact a {
+        padding: 16px;
+        margin: 8px;
+    }
+    #contact a svg {
+        width: 28px;
+        height: 28px;
     }
 }
